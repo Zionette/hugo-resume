@@ -2,7 +2,10 @@
   {
       "grouping":"AWS Certified Solutions Architect",
       "skills":[ "AWS Security","Serverless Web Apps Using Amazon DynamoDB","AWS Big Data","AWS Cloud9","AWS CodeStar","AWS CodeCommit","AWS Amplify","AWS Lex","QwikLabs"]
-  },{
+  },
+
+  
+  {
       "grouping":"Languages, Operating Systems & Tools",
       "skills":[ "HTML5","HTML","JavaScript","CSS","MySQL","git","atom"]
   },
