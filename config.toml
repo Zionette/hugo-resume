@@ -13,10 +13,10 @@ name = "awsbucket"
 URL = "s3://cloud4z2.com/?region=us-east-1"
 
 [params]
-address = "Tallahasse, FL"
+address = "Tallahassee, FL"
 email = "zionette@cloud4z2.awsapps.com"
 favicon = "/favicon.ico"
-firstName = "Shannon"
+firstName = "Zionette"
 lastName = "Cleek"
 phone = "1-850-324-6742"
 profileImage = "img/IMG_2972.jpeg"
