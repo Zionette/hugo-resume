@@ -1,0 +1,22 @@
+[
+    {
+        "school":"[Udemy](https://udemy.com)",
+        "degree":"AWS Certified Solutions Architect",
+        "major":"Certified Solutions Architect Program 26hrs",
+        "notes":"Certified Cloud Practitioner Program 12.5hrs",
+        "range":"May 14, 2020"
+    },
+    {
+        "school":"[Free Code Academy](https://www.freecodecamp.org/)",
+        "degree":"Responsive Web Design Certificate",
+        "major":"HTML5, HTML, SQL, CSS, CSS Grid, CSS Flexbox, Applied Visual Design, Applied Accessability: 300hrs",
+        "range":"2019 - 2020"
+    },
+
+    {
+        "school":"Stark State College",
+        "degree":"Court and Conferencing Reporter",
+        "major":"Freelance Stenographer",
+        "range":"1999 - 2001"
+    }
+]
