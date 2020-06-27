@@ -1,5 +1,5 @@
 title = "Zionette Cleek"
-baseURL = "https://s3.amazonaws.com/bucket/"
+baseURL = "https://cloud4z2.com/"
 theme = "hugo-resume"
 languageCode = "en-us"
 PygmentsCodeFences = true
