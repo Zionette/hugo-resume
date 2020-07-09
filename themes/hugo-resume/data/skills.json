@@ -1,7 +1,7 @@
 [
   {
       "grouping":"AWS Certified Solutions Architect",
-      "skills":[ "Amazon Lex", "Lambda","S3","AWS Security","Serverless Web Apps Using Amazon DynamoDB","AWS Big Data","Cloud9","CodeStar","CodeCommit","CodeBuild","CodeDeploy","CodePipeline","Cloudfront","Route53","CertificateManager","Amplify", "QwikLabs"]
+      "skills":[ "Amazon Lex", "Lambda","Amazon Cognito","S3","AWS Security","Serverless Web Apps Using Amazon DynamoDB","AWS Big Data","Cloud9","CodeStar","CodeCommit","CodeBuild","CodeDeploy","CodePipeline","Cloudfront","Route53","CertificateManager","Amplify", "QwikLabs"]
   },
 
   
