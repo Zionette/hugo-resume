@@ -1,6 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+     
+ <title>Zionette's Profile</title>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.41.0.min.js"></script>
+    <style language="text/css">
+        input#wisdom {
+            padding: 4px;
+            font-size: 1em;
+            width: 400px
+        }
+    input::placeholder {
+        color: #fff;
+        font-style: italic;
+    }
+
+    p.userRequest {
+        margin: 4px;
+        padding: 4px 10px 4px 10px;
+        border-radius: 4px;
+        min-width: 50%;
+        max-width: 85%;
+        float: left;
+        background-color: #eeee;
+    }
+
+    p.lexResponse {
+        margin: 4px;
+        padding: 4px 10px 4px 10px;
+        border-radius: 4px;
+        text-align: right;
+        min-width: 50%;
+        max-width: 85%;
+        float: right;
+        background-color: #ddd;
+        font-style: italic;
+    }
+
+    p.lexError {
+        margin: 4px;
+        padding: 4px 10px 4px 10px;
+        border-radius: 4px;
+        text-align: right;
+        min-width: 50%;
+        max-width: 85%;
+        float: right;
+        background-color: #f77;
+    }
+</style>
+    
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>{{ .Site.Title }} | {{ .Title }}</title>
@@ -35,92 +83,20 @@
    <!-- pl;aceholder -->
   {{ end }}
   
-     <title>Amazon Lex for JavaScript - ZionBot (Tutorials)</title>
-    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.41.0.min.js"></script>
-    <style language="text/css">
-        input#wisdom {
-            padding: 4px;
-            font-size: 1em;
-            width: 400px
-        }
-    input::placeholder {
-        color: #ccc;
-        font-style: italic;
-    }
-
-    p.userRequest {
-        margin: 4px;
-        padding: 4px 10px 4px 10px;
-        border-radius: 4px;
-        min-width: 50%;
-        max-width: 85%;
-        float: left;
-        background-color: #7d7;
-    }
-
-    p.lexResponse {
-        margin: 4px;
-        padding: 4px 10px 4px 10px;
-        border-radius: 4px;
-        text-align: right;
-        min-width: 50%;
-        max-width: 85%;
-        float: right;
-        background-color: #bbf;
-        font-style: italic;
-    }
-
-    p.lexError {
-        margin: 4px;
-        padding: 4px 10px 4px 10px;
-        border-radius: 4px;
-        text-align: right;
-        min-width: 50%;
-        max-width: 85%;
-        float: right;
-        background-color: #f77;
-    }
-</style>
 
 </head>
+
 <body id="page-top">
   {{ partial "nav.html" . }}
   <div class="container-fluid p-0">
     {{ block "main" . }}
       {{ .Content }}
     {{ end }}
-
-    <span style="color: #999999; font-size: 60%;">Nifty <a href="https://codepen.io/wbeeftink/pen/dIaDH">tech tag lists</a> from <a class="pen-owner-link" href="https://codepen.io/wbeeftink">Wouter Beeftink</a> </span>
-    {{ with $.GitInfo }}{{ with $.Site.Params.gitCommitPrefix }} | <span style="color: #999999; font-size: 60%;">Page content generated from commit: <a href="{{ . }}/{{ $.GitInfo.AbbreviatedHash }}" title="log: {{ $.GitInfo.Subject }}">{{ $.GitInfo.AbbreviatedHash }}</a>{{ end }}{{end}}
-  </div>
-  <!-- Bootstrap core JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script async src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Plugin JavaScript -->
-  <script async src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-  <!-- Custom scripts for this template -->
-  <script async src="/js/resume.js"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.google.analytics.trackerID }}"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', '{{ .Site.Params.google.analytics.trackerID }}');
-  </script>
-  {{ block "footerfiles" . }}
-
-  {{ end }}
-  
-<h1 style="text-align:  left">Amazon Lex - BookTrip</h1>
-    <p style="width: 400px">
-        This little chatbot shows how easy it is to incorporate
-        <a href="https://aws.amazon.com/lex/" title="Amazon Lex (product)" target="_new">Amazon Lex</a> into your web pages.  Try it out.
-    </p>
-    <div id="conversation" style="width: 400px; height: 400px; border: 1px solid #ccc; background-color: #eee; padding: 4px; overflow: scroll"></div>
+    
+    <h3 style="text-align:  right">ZionBot</h3>
+ <div id="conversation" style="width: 400px; height: 400px; border: 1px solid #ccc; background-color: #ffff; padding: 4px; overflow: scroll"></div>
     <form id="chatform" style="margin-top: 10px" onsubmit="return pushChat();">
-        <input type="text" id="wisdom" size="80" value="" placeholder="I need a hotel room">
+        <input type="text" id="wisdom" size="80" value="" placeholder="How can I assist">
     </form>
     <script type="text/javascript">
         // set the focus to the input box
@@ -218,6 +194,32 @@
         conversationDiv.scrollTop = conversationDiv.scrollHeight;
     }
 </script>
+   
+
+    <span style="color: #999999; font-size: 60%;">Nifty <a href="https://codepen.io/wbeeftink/pen/dIaDH">tech tag lists</a> from <a class="pen-owner-link" href="https://codepen.io/wbeeftink">Wouter Beeftink</a> </span>
+    {{ with $.GitInfo }}{{ with $.Site.Params.gitCommitPrefix }} | <span style="color: #999999; font-size: 60%;">Page content generated from commit: <a href="{{ . }}/{{ $.GitInfo.AbbreviatedHash }}" title="log: {{ $.GitInfo.Subject }}">{{ $.GitInfo.AbbreviatedHash }}</a>{{ end }}{{end}}
+  </div>
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <!-- Custom scripts for this template -->
+  <script async src="/js/resume.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.google.analytics.trackerID }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '{{ .Site.Params.google.analytics.trackerID }}');
+  </script>
+  {{ block "footerfiles" . }}
+
+  {{ end }}
+  
+ 
 
 
 </body>
