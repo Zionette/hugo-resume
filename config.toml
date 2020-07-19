@@ -34,6 +34,10 @@ showSkills = true
 trackerID = "XX-123446-01"
 
 [[params.handles]]
+link = "https://www.cloud4z2.slack.com/"
+name = "Slack"
+
+[[params.handles]]
 link = "https://www.linkedin.com/in/zcleek/"
 name = "LinkedIn"
 
