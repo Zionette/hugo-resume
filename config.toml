@@ -24,7 +24,7 @@ showEducation = true
 showExperience = true
 showOpenSource = false
 showProjects = false
-showPublications = false
+showCertifications = true
 showQr = true
 showSkills = true
 
