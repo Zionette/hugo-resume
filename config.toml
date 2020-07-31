@@ -46,7 +46,7 @@ link = "https://github.com/Zionette/"
 name = "GitHub"
 
 [[params.handles]]
-link = "https://www.facebook.com/PEOPLE.zcleek"
+link = "https://www.facebook.com/Cloud4z2-114631980341523"
 name = "Facebook"
 
 [[params.handles]]
@@ -54,8 +54,12 @@ link = "https://twitter.com/Zionette2"
 name = "twitter"
 
 [[params.handles]]
-link = "https://www.instagram.com/peopleunleashed/"
-name = "instagram"
+link = "https://mewe.com/i/zionettecleek"
+name = "MeWe"
+
+[[params.handles]]
+link = "https://www.reddit.com/user/ZionBot2"
+name = "Reddit"
 
 
 
