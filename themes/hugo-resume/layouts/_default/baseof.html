@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     
-
-    
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>{{ .Site.Title }} | {{ .Title }}</title>
@@ -37,23 +34,15 @@
   {{ block "headfiles" . }}
    <!-- pl;aceholder -->
   {{ end }}
-  
-  
-  
-
 </head>
-
 <body id="page-top">
   {{ partial "nav.html" . }}
   <div class="container-fluid p-0">
     {{ block "main" . }}
       {{ .Content }}
     {{ end }}
-    
-   
-   
 
-    <span style="color: #999999; font-size: 60%;">Nifty <a href="https://codepen.io/wbeeftink/pen/dIaDH">tech tag lists</a> from <a class="pen-owner-link" href="https://codepen.io/wbeeftink">Wouter Beeftink</a> </span>
+    <span style="color: #999999; font-size: 60%;">Nifty <a href="https://codepen.io/wbeeftink/pen/dIaDH">tech tag lists</a> from <a class="pen-owner-link" href="https://codepen.io/wbeeftink">Wouter Beeftink</a> </span>
     {{ with $.GitInfo }}{{ with $.Site.Params.gitCommitPrefix }} | <span style="color: #999999; font-size: 60%;">Page content generated from commit: <a href="{{ . }}/{{ $.GitInfo.AbbreviatedHash }}" title="log: {{ $.GitInfo.Subject }}">{{ $.GitInfo.AbbreviatedHash }}</a>{{ end }}{{end}}
   </div>
   <!-- Bootstrap core JavaScript -->
@@ -72,75 +61,8 @@
 
     gtag('config', '{{ .Site.Params.google.analytics.trackerID }}');
   </script>
-  
-
   {{ block "footerfiles" . }}
 
   {{ end }}
- 
-
- 
-   
-    <!-- loader script -->
-    <script src="./lex-web-ui/lex-web-ui-loader.js"></script>
-    <script>
-      /*
-        The loader library creates a global object named ChatBotUiLoader
-        It includes the IframeLoader constructor
-        An instance of IframeLoader has the load function which kicks off
-        the load process
-      */
-
-      // options for the loader constructor
-      var loaderOptions = {
-        // you can put the chatbot UI config in a JSON file
-        configUrl: './chatbot-ui-loader-config.json',
-
-        // the full page chatbot UI that will be iframed
-        iframeSrcPath: './chatbot-index.html#/?lexWebUiEmbed=true'
-      };
-
-      // The following statement instantiates the IframeLoader
-      var iframeLoader = new ChatBotUiLoader.IframeLoader(loaderOptions);
-
-      // chatbot UI config
-      // The loader can also obtain these values from other sources such
-      // as a JSON file or events. The configUrl variable in the
-      // loaderOptions above can be used to put these config values in a file
-      // instead of explicitly passing it as an argument.
-      var chatbotUiConfig = {
-        ui: {
-          // origin of the parent site where you are including the chatbot UI
-          // set to window.location.origin since hosting on same site
-          parentOrigin: window.location.origin,
-        },
-        iframe: {
-          // origin hosting the HTML file that will be embedded in the iframe
-          // set to window.location.origin since hosting on same site
-          iframeOrigin: window.location.origin,
-        },
-        cognito: {
-          // Your Cognito Pool Id - this is required to provide AWS credentials
-          poolId: 'us-east-1:e62c6686-823a-4a6f-a5da-436bbc7dd28c'
-        },
-        lex: {
-          // Lex Bot Name in your account
-          botName: 'ZionBot'
-        }
-      };
-
-      // Call the load function which returns a promise that is resolved
-      // once the component is loaded or is rejected if there is an error
-      iframeLoader.load(chatbotUiConfig)
-        .then(function () {
-          console.log('iframe loaded');
-        })
-        .catch(function (err) {
-          console.error(err);
-        });
-    </script>
-
-
-
 </body>
 </html>

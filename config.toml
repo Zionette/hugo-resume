@@ -49,9 +49,7 @@ name = "GitHub"
 link = "https://www.facebook.com/Cloud4z2-114631980341523"
 name = "Facebook"
 
-[[params.handles]]
-link = "https://twitter.com/Zionette2"
-name = "twitter"
+
 
 [[params.handles]]
 link = "https://mewe.com/i/zionettecleek"
