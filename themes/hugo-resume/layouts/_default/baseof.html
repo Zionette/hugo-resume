@@ -64,5 +64,31 @@
   {{ block "footerfiles" . }}
 
   {{ end }}
+  
+  {
+  // same fields as the lex-web-ui component
+  lex: {...},
+  ...
+  ui: {
+    // controls which origin can communicate and load the chatbot UI
+    parentOrigin: 'https://parentpage.example.com',
+  },
+  ...
+  // add an iframe field used when embedding in an iframe
+  iframe: {
+    // origin of the iframe containing the chatbot UI
+    iframeOrigin: 'https://iframe.example.com',
+
+    // Path and url query string used to point where
+    // where the page chatbot UI page is located and to indicate that
+    // the component is loading as an iframe.
+    // This is appended to iframeOrigin
+    iframeSrcPath: '/index.html#/?lexWebUiEmbed=true',
+
+    // indicates if the chatbot UI in the iframe should load minimized
+    shouldLoadIframeMinimized: true,
+  }
+}
+  
 </body>
 </html>
