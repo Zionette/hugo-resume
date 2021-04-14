@@ -14,7 +14,7 @@ URL = "s3://cloud4z2.com/?region=us-east-1"
 
 [params]
 address = "Tallahassee, FL"
-email = "zionette@cloud4z2.awsapps.com"
+email = "zionette@cloud4z2.com"
 favicon = "/favicon.ico"
 firstName = "Zionette"
 lastName = "Cleek"
@@ -45,19 +45,12 @@ name = "LinkedIn"
 link = "https://github.com/Zionette/"
 name = "GitHub"
 
-[[params.handles]]
-link = "https://www.facebook.com/Cloud4z2-114631980341523"
-name = "Facebook"
-
-
 
 [[params.handles]]
 link = "https://mewe.com/i/zionettecleek"
 name = "MeWe"
 
-[[params.handles]]
-link = "https://www.reddit.com/user/ZionBot2"
-name = "Reddit"
+
 
 
 
